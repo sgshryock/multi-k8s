@@ -12,3 +12,5 @@ docker push sgshryock/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=sgshryock/multi-server:$SHA
+kubectl set image deployments/client-deployment client=sgshryock/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=sgshryock/multi-worker:$SHA
