@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+     
+kind: Certificate
+metadata:
+  name: k8.gordonshryock-com-tls
+spec:
+  secretName: k8.gordonshryock-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: k8.gordonshryock.dev
+  dnsNames:
+    - k8.gordonshryock.dev
+    - www.k8.gordonshryock.dev
